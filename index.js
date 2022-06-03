@@ -106,7 +106,7 @@ bot.action(/successful_paymentRequest_+/, ctx => {
     Payment.findByIdAndUpdate(paymentRequestId, {
         status: 2
     }, (err, paymentRequest) => {
-        ctx.telegram.sendMessage(paymentRequest.customer.telegram_id, "✅ Вывод средств прошёл успешно ! Деньги будут перечислены на указанный Вами реквизит во время следующей волны выплат: 31 мая, 2022");
+        ctx.telegram.sendMessage(paymentRequest.customer.telegram_id, "✅ Вывод средств прошёл успешно ! Деньги будут перечислены на указанный Вами реквизит во время следующей волны выплат: 15 июня, 2022");
         // Чистим админскую личку
         ctx.telegram.deleteMessage(1257409280, paymentRequest.initialAdminMessage);
         ctx.telegram.deleteMessage(1257409280, paymentRequest.smsRequestMessage);
